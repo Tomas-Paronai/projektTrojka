@@ -1,0 +1,7 @@
+﻿  Main.cpp
+d:\development\vs projects\remote-projects\zadanie6\programdictionary\programdictionary\dataholder.h(9): warning C4091: 'typedef ': ignored on left of 'CommType' when no variable is declared
+d:\development\vs projects\remote-projects\zadanie6\programdictionary\programdictionary\dataholder.h(17): warning C4091: 'typedef ': ignored on left of 'Command' when no variable is declared
+d:\development\vs projects\remote-projects\zadanie6\programdictionary\programdictionary\dataholder.h(23): warning C4091: 'typedef ': ignored on left of 'Language' when no variable is declared
+d:\development\vs projects\remote-projects\zadanie6\programdictionary\programdictionary\dictionary.h(19): warning C4091: 'typedef ': ignored on left of 'Level' when no variable is declared
+d:\development\vs projects\remote-projects\zadanie6\programdictionary\programdictionary\main.cpp(30): warning C4101: 'command': unreferenced local variable
+  ProgramDictionary.vcxproj -> D:\DEVELOPMENT\VS Projects\Remote-Projects\Zadanie6\ProgramDictionary\Debug\ProgramDictionary.exe
