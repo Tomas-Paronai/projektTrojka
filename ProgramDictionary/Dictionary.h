@@ -18,6 +18,9 @@ typedef enum Level {
 	DET
 };
 
-void printData(char languageIndex, char commandIndex, Language *data);
+void printData(char languageIndex, char typeIndex, char commandIndex, Language *data);
+void printLegend();
+int getAvailableCommandsCount(char languageIndex, CommType type, Language *data);
+CommType getTypeEnum(int index);
 
 char *getTypeString(int index);

@@ -6,18 +6,19 @@ typedef enum CommType {
 	OUT,
 	LOGIC,
 	ARITMETIC,
-};
+}CommType;
 
 
 typedef struct Command {
 	CommType type;
-	char **lib;
+	char *lib;
+	char *name;
 	char *disc;
 	char *syntax;
-};
+}Command;
 
 typedef struct Language {
 	char *name;
 	Command *commands;
 	int numberOfCommands;
-};
+}Language;
