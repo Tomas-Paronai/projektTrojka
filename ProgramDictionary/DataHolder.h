@@ -1,4 +1,4 @@
-#define SIZE 2
+#define SIZE 4
 #define  TYPE_SIZE 4
 
 typedef enum CommType {

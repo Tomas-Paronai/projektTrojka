@@ -1,4 +1,3 @@
 #include "Dictionary.h"
-
-Language *readDatabase(FILE inputFile);
+Language *readDatabase(FILE *inputFile);
 

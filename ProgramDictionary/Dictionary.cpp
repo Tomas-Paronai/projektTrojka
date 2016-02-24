@@ -40,16 +40,33 @@ void printData(char languageIndex, char typeIndex, char commandIndex, Language *
 			for (i = 0; i < data[l_index].numberOfCommands; i++) {
 				if (data[l_index].commands[i].type == getTypeEnum(t_index)) {
 					printf("%d. ", index++);
-					printf("%s\n", data[l_index].commands[i].name);
+					if (data[l_index].commands[i].name != NULL) {
+						printf("%s\n", data[l_index].commands[i].name);
+					}					
 				}
 			}
 		}
 		else {
 			if (availableCommands != NULL) {
-				printf("You have selected command: %s\n", availableCommands[c_index].name);
-				printf("%s\n", availableCommands[c_index].disc);
-				printf("Libraries: %s\n", availableCommands[c_index].lib);		
-				printf("\n%s\n", availableCommands[c_index].syntax);
+				if (availableCommands[c_index].name != NULL) {
+					printf("You have selected command: %s\n", availableCommands[c_index].name);
+				}
+				else {
+					printf("You have selected %d. command in list\n", c_index);
+				}
+				
+				if (availableCommands[c_index].disc != NULL) {
+					printf("\n%s\n", availableCommands[c_index].disc);
+				}
+				if (availableCommands[c_index].lib != NULL) {
+					printf("Libraries: %s\n", availableCommands[c_index].lib);
+				}
+				else {
+					printf("No libraries required.");
+				}
+				if (availableCommands[c_index].syntax != NULL) {
+					printf("\n%s\n", availableCommands[c_index].syntax);
+				}				
 			}
 					
 		}

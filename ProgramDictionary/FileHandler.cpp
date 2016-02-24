@@ -1,9 +1,9 @@
 #include "FileHandler.h"
 
 Language *readDatabase(FILE *inputFile) {
-	Language *inputLanguages = NULL;
+	Language inputLanguages[SIZE];
 	if (inputFile != NULL) {
-		inputLanguages = (Language*)malloc(sizeof(Language) * SIZE);
+		//inputLanguages = (Language*)malloc(sizeof(Language) * SIZE);
 		fread(inputLanguages, sizeof(Language), SIZE, inputFile);
 	}
 
