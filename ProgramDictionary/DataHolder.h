@@ -1,9 +1,16 @@
-#define SIZE 4
+#define _CRT_SECURE_NO_DEPRECATE
+#define _CRT_NONSTDC_NO_DEPRECATE
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+#define SIZE_LANGUAGE 4
 #define  TYPE_SIZE 4
 
 typedef enum CommType {
-	IN,
-	OUT,
+	IN_PUT,
+	OUT_PUT,
 	LOGIC,
 	ARITMETIC,
 }CommType;
@@ -22,3 +29,5 @@ typedef struct Language {
 	Command *commands;
 	int numberOfCommands;
 }Language;
+
+Language *getData();

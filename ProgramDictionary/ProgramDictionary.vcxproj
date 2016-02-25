@@ -151,6 +151,7 @@
     <ClInclude Include="FileHandler.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataHolder.cpp" />
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="FileHandler.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -1,4 +1,5 @@
-﻿  FileHandler.cpp
-c:\users\tomas\documents\visual studio 2015\projects\projekttrojka\programdictionary\dictionary.h(19): warning C4091: 'typedef ': ignored on left of 'Level' when no variable is declared
-c:\users\tomas\documents\visual studio 2015\projects\projekttrojka\programdictionary\filehandler.cpp(10): warning C4172: returning address of local variable or temporary: inputLanguages
+﻿  Main.cpp
+c:\users\tomas\documents\visual studio 2015\projects\projekttrojka\programdictionary\dictionary.h(18): warning C4091: 'typedef ': ignored on left of 'Level' when no variable is declared
+c:\users\tomas\documents\visual studio 2015\projects\projekttrojka\programdictionary\dictionary.h(28): warning C4091: 'typedef ': ignored on left of 'Color' when no variable is declared
+c:\users\tomas\documents\visual studio 2015\projects\projekttrojka\programdictionary\main.cpp(16): warning C4101: 'command': unreferenced local variable
   ProgramDictionary.vcxproj -> C:\Users\tomas\Documents\Visual Studio 2015\Projects\projektTrojka\Debug\ProgramDictionary.exe

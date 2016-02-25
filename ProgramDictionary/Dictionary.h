@@ -8,8 +8,7 @@
 #include <conio.h>
 #include <ctype.h>
 #include <string.h>
-
-
+#include <windows.h>
 
 typedef enum Level {
 	LANG = 1,
@@ -18,9 +17,18 @@ typedef enum Level {
 	DET
 };
 
+typedef enum Color {
+	BLUE = 9,
+	GREEN,
+	CYAN,
+	RED,
+	PINK,
+	YELLOW,
+	WHITE
+};
+
 void printData(char languageIndex, char typeIndex, char commandIndex, Language *data);
 void printLegend();
 int getAvailableCommandsCount(char languageIndex, CommType type, Language *data);
 CommType getTypeEnum(int index);
-
 char *getTypeString(int index);
