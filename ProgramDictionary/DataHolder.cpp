@@ -18,12 +18,291 @@ Language *getData() {
 	char *name = "java\0";
 	data[0].name = (char*)malloc(sizeof(char)*(strlen(name) + 1));
 	strcpy(data[0].name, name);
-	data[0].commands = (Command*)malloc(sizeof(Command) * 2);
+	data[0].commands = (Command*)malloc(sizeof(Command) * 14);
 	data[0].commands[0] = command1;
 	data[0].commands[1] = command2;
-	data[0].numberOfCommands = 2;
+	data[0].numberOfCommands = 14;
+
+	//command Println
+
+	data[0].commands[0].type = OUT_PUT;
+
+	libr[0][0] = "null\0";
+	data[0].commands[0].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][0]) + 1));
+	strcpy(data[0].commands[0].lib, libr[0][0]);
+
+	nam[0][0] = "Println\0";
+	data[0].commands[0].name = (char*)malloc(sizeof(char)*(strlen(nam[0][0]) + 1));
+	strcpy(data[0].commands[0].name, nam[0][0]);
+
+	dis[0][0] = "System.out.print is a standard output function used in java. where System specifies the package name, out specifies the class name and print is a function in that class.\0";
+	data[0].commands[0].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][0]) + 1));
+	strcpy(data[0].commands[0].disc, dis[0][0]);
+
+	com[0][0] = "System.out.println(\"Hello World\");\0";
+	data[0].commands[0].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][0]) + 1));
+	strcpy(data[0].commands[0].syntax, com[0][0]);
+
+	//command scanner int
+
+	data[0].commands[1].type = IN_PUT;
+
+	libr[0][1] = "java.util.Scanner";
+	data[0].commands[1].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][1]) + 1));
+	strcpy(data[0].commands[1].lib, libr[0][1]);
+
+	nam[0][1] = "Scanner Int\0";
+	data[0].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[0][1]) + 1));
+	strcpy(data[0].commands[1].name, nam[0][1]);
+
+	dis[0][1] = "The Java method Scans the next token of the input as an int\0";
+	data[0].commands[1].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][1]) + 1));
+	strcpy(data[0].commands[1].disc, dis[0][1]);
+
+	com[0][1] = "int number = scanner.nextInt();\0";
+	data[0].commands[1].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][1]) + 1));
+	strcpy(data[0].commands[1].syntax, com[0][1]);
+
+	//command scanner double
+
+	data[0].commands[2].type = IN_PUT;
+
+	libr[0][2] = "java.util.Scanner";
+	data[0].commands[2].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][2]) + 1));
+	strcpy(data[0].commands[2].lib, libr[0][2]);
+
+	nam[0][2] = "Scanner Double\0";
+	data[0].commands[2].name = (char*)malloc(sizeof(char)*(strlen(nam[0][2]) + 1));
+	strcpy(data[0].commands[2].name, nam[0][2]);
+
+	dis[0][2] = "The Java method Scans the next token of the input as a double\0";
+	data[0].commands[2].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][2]) + 1));
+	strcpy(data[0].commands[2].disc, dis[0][2]);
+
+	com[0][2] = "double number = scanner.nextDouble();\0";
+	data[0].commands[2].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][2]) + 1));
+	strcpy(data[0].commands[2].syntax, com[0][2]);
+
+	//command scanner char
+
+	data[0].commands[3].type = IN_PUT;
+
+	libr[0][3] = "null\0";
+	data[0].commands[3].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][3]) + 1));
+	strcpy(data[0].commands[3].lib, libr[0][3]);
+
+	nam[0][3] = "Scanner char\0";
+	data[0].commands[3].name = (char*)malloc(sizeof(char)*(strlen(nam[0][3]) + 1));
+	strcpy(data[0].commands[3].name, nam[0][3]);
+
+	dis[0][3] = "NextChar() isn't a method of the scanner class, it doesn't work.\0";
+	data[0].commands[3].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][3]) + 1));
+	strcpy(data[0].commands[3].disc, dis[0][3]);
+
+	com[0][3] = "null\0";
+	data[0].commands[3].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][3]) + 1));
+	strcpy(data[0].commands[3].syntax, com[0][3]);
+
+	//command scanner string
+
+	data[0].commands[4].type = IN_PUT;
+
+	libr[0][4] = "java.util.Scanner";
+	data[0].commands[4].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][4]) + 1));
+	strcpy(data[0].commands[4].lib, libr[0][4]);
+
+	nam[0][4] = "Scanner String\0";
+	data[0].commands[4].name = (char*)malloc(sizeof(char)*(strlen(nam[0][4]) + 1));
+	strcpy(data[0].commands[4].name, nam[0][4]);
+
+	dis[0][4] = "The Java method Scans the next token of the input as a string\0";
+	data[0].commands[4].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][4]) + 1));
+	strcpy(data[0].commands[4].disc, dis[0][4]);
+
+	com[0][4] = "string input = scanner.nextLine();\0";
+	data[0].commands[4].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][4]) + 1));
+	strcpy(data[0].commands[4].syntax, com[0][4]);
+
+	//command Putchar
+
+	data[0].commands[5].type = OUT_PUT;
+
+	libr[0][5] = "java.nio.ByteBuffer\0";
+	data[0].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][5]) + 1));
+	strcpy(data[0].commands[5].lib, libr[0][5]);
+
+	nam[0][5] = "Putchar\0";
+	data[0].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[0][5]) + 1));
+	strcpy(data[0].commands[5].name, nam[0][5]);
+
+	dis[0][5] = "The getChar() method read  2 byte from current position and increment position.\0";
+	data[0].commands[5].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][5]) + 1));
+	strcpy(data[0].commands[5].disc, dis[0][5]);
+
+	com[0][5] = "System.out.print(bytebuf.getChar());\0";
+	data[0].commands[5].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][5]) + 1));
+	strcpy(data[0].commands[5].syntax, com[0][5]);
+
+	//command Getchar
+
+	data[0].commands[6].type = IN_PUT;
+
+	libr[0][6] = "java.lang.*;\0";
+	data[0].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][6]) + 1));
+	strcpy(data[0].commands[6].lib, libr[0][6]);
+
+	nam[0][6] = "Getchar\0";
+	data[0].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[0][6]) + 1));
+	strcpy(data[0].commands[6].name, nam[0][6]);
+
+	dis[0][6] = "This method copies characters from this string into the destination character array.\0";
+	data[0].commands[6].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][6]) + 1));
+	strcpy(data[0].commands[6].disc, dis[0][6]);
+
+	com[0][6] = "/* copies characters from starting and ending index into the destination character array */\n str.getChars(12, 26, chararr, 0)\n System.out.println(chararr);\0";
+	data[0].commands[6].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][6]) + 1));
+	strcpy(data[0].commands[6].syntax, com[0][6]);
+
+	//command For
+
+	data[0].commands[7].type = ARITMETIC;
+
+	libr[0][7] = "null\0";
+	data[0].commands[7].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][7]) + 1));
+	strcpy(data[0].commands[7].lib, libr[0][7]);
+
+	nam[0][7] = "Do_While\0";
+	data[0].commands[7].name = (char*)malloc(sizeof(char)*(strlen(nam[0][7]) + 1));
+	strcpy(data[0].commands[7].name, nam[0][7]);
+
+	dis[0][7] = "For executes a block of statements repeatedly until the specified condition returns false.\0";
+	data[0].commands[7].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][7]) + 1));
+	strcpy(data[0].commands[7].disc, dis[0][7]);
+
+	com[0][7] = "for(int b=0; b<=9; b++)\n System.out.println(b)\0";
+	data[0].commands[7].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][7]) + 1));
+	strcpy(data[0].commands[7].syntax, com[0][7]);
+
+	//command While
+
+	data[0].commands[8].type = LOGIC;
+
+	libr[0][8] = "null\0";
+	data[0].commands[8].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][8]) + 1));
+	strcpy(data[0].commands[8].lib, libr[0][8]);
+
+	nam[0][8] = "While\0";
+	data[0].commands[8].name = (char*)malloc(sizeof(char)*(strlen(nam[0][8]) + 1));
+	strcpy(data[0].commands[8].name, nam[0][8]);
+
+	dis[0][8] = "The while statement continually executes a block of statements while a particular condition is true.\0";
+	data[0].commands[8].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][8]) + 1));
+	strcpy(data[0].commands[8].disc, dis[0][8]);
+
+	com[0][5] = "int n=0;\n while(n<=5) {\n System.out.println(n);\n n++;\n }\0";
+	data[0].commands[8].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][8]) + 1));
+	strcpy(data[0].commands[8].syntax, com[0][8]);
+
+	//command Do_While
+
+	data[0].commands[9].type = LOGIC;
+
+	libr[0][9] = "null\0";
+	data[0].commands[9].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][9]) + 1));
+	strcpy(data[0].commands[9].lib, libr[0][9]);
+
+	nam[0][9] = "Do_While\0";
+	data[0].commands[9].name = (char*)malloc(sizeof(char)*(strlen(nam[0][9]) + 1));
+	strcpy(data[0].commands[9].name, nam[0][9]);
+
+	dis[0][9] = "Do-while loop evaluates the boolean expression at the end of the loop’s body. Therefore the set of statements gets executed at-least once before the check of boolean expression.\0";
+	data[0].commands[9].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][9]) + 1));
+	strcpy(data[0].commands[9].disc, dis[0][9]);
+
+	com[0][9] = "int i=5;\n do{\n System.out.println(i);\n i--;\n }while(i>=1);\0";
+	data[0].commands[9].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][9]) + 1));
+	strcpy(data[0].commands[9].syntax, com[0][9]);
+
+	//command If
+
+	data[0].commands[10].type = LOGIC;
+
+	libr[0][10] = "null\0";
+	data[0].commands[10].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][10]) + 1));
+	strcpy(data[0].commands[10].lib, libr[0][10]);
+
+	nam[0][10] = "If\0";
+	data[0].commands[10].name = (char*)malloc(sizeof(char)*(strlen(nam[0][10]) + 1));
+	strcpy(data[0].commands[10].name, nam[0][10]);
+
+	dis[0][10] = "The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true.\0";
+	data[0].commands[10].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][10]) + 1));
+	strcpy(data[0].commands[10].disc, dis[0][10]);
+
+	com[0][10] = "int a=50;\n if(a>=0 && a<=100)\n System.out.println(\"Number was from <0-100> range.\");\n else\n System.out.println(\"Number was not from <0-100> range.\");\0";
+	data[0].commands[10].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][10]) + 1));
+	strcpy(data[0].commands[10].syntax, com[0][10]);
+
+	//Mallloc
+
+	data[0].commands[11].type = IN_PUT;
+
+	libr[0][11] = "null\0";
+	data[0].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][11]) + 1));
+	strcpy(data[0].commands[11].lib, libr[0][11]);
+
+	nam[0][11] = "Malloc\0";
+	data[0].commands[11].name = (char*)malloc(sizeof(char)*(strlen(nam[0][11]) + 1));
+	strcpy(data[0].commands[11].name, nam[0][11]);
+
+	dis[0][11] = "In Java, memory is managed for you, so you cannot explicitly delete or free an object.\0";
+	data[0].commands[11].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][11]) + 1));
+	strcpy(data[0].commands[11].disc, dis[0][11]);
+
+	com[0][11] = "null\0";
+	data[0].commands[11].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][11]) + 1));
+	strcpy(data[0].commands[11].syntax, com[0][11]);
+
+	//command Enum
+
+	data[0].commands[12].type = LOGIC;
+
+	libr[0][12] = "null\0";
+	data[0].commands[12].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][12]) + 1));
+	strcpy(data[0].commands[12].lib, libr[0][12]);
+
+	nam[0][12] = "Enum\0";
+	data[0].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[0][12]) + 1));
+	strcpy(data[0].commands[12].name, nam[0][12]);
+
+	dis[0][12] = "A Java Enum is a special Java type used to define collections of constants.\0";
+	data[0].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][12]) + 1));
+	strcpy(data[0].commands[12].disc, dis[0][12]);
+
+	com[0][12] = "private enum Level {\n HIGH,MEDIUM,LOW\n }\0";
+	data[0].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][12]) + 1));
+	strcpy(data[0].commands[12].syntax, com[0][12]);
 
 
+	//command Switch
+
+	data[0].commands[13].type = LOGIC;
+
+	libr[0][13] = "null\0";
+	data[0].commands[13].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][13]) + 1));
+	strcpy(data[0].commands[13].lib, libr[0][13]);
+
+	nam[0][13] = "Switch\0";
+	data[0].commands[13].name = (char*)malloc(sizeof(char)*(strlen(nam[0][13]) + 1));
+	strcpy(data[0].commands[13].name, nam[0][13]);
+
+	dis[0][13] = "A switch statement is useful when you need to select one of several alternatives based on the value of an integer, a character, or a String variable.\0";
+	data[0].commands[13].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][13]) + 1));
+	strcpy(data[0].commands[13].disc, dis[0][13]);
+
+	com[0][13] = "int month = 2;\n String monthString;\n switch (month) {\n case 1:  monthString = \"January\";\n break;\n case 2:  monthString = \"February\";\n break;\n case 3:  monthString = \"March\";\n break;\n default: monthString = \"Invalid month\";\n break;\n}\n System.out.println(monthString);\0";
+	data[0].commands[13].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][13]) + 1));
+	strcpy(data[0].commands[13].syntax, com[0][13]);
 
 	char* name2 = "C++\0";
 	data[1].name = (char*)malloc(sizeof(char)*(strlen(name2) + 1));
@@ -141,7 +420,7 @@ Language *getData() {
 	data[1].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[1][5]) + 1));
 	strcpy(data[1].commands[5].lib, libr[1][5]);
 
-	nam[1][5] = "getchar\0";
+	nam[1][5] = "Getchar\0";
 	data[1].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[1][5]) + 1));
 	strcpy(data[1].commands[5].name, nam[1][5]);
 
@@ -161,7 +440,7 @@ Language *getData() {
 	data[1].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[1][6]) + 1));
 	strcpy(data[1].commands[6].lib, libr[1][6]);
 
-	nam[1][6] = "getchar\0";
+	nam[1][6] = "Putchar\0";
 	data[1].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[1][6]) + 1));
 	strcpy(data[1].commands[6].name, nam[1][6]);
 
@@ -255,7 +534,7 @@ Language *getData() {
 
 	//memmory allocation
 
-	data[1].commands[11].type = IN_PUT;
+	data[1].commands[11].type = LOGIC;
 
 	libr[1][11] = "stdio.h stdlib.h\0";
 	data[1].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[1][11]) + 1));
@@ -430,7 +709,7 @@ Language *getData() {
 	data[2].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[2][5]) + 1));
 	strcpy(data[2].commands[5].lib, libr[2][5]);
 
-	nam[2][5] = "getchar\0";
+	nam[2][5] = "Getchar\0";
 	data[2].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[2][5]) + 1));
 	strcpy(data[2].commands[5].name, nam[2][5]);
 
@@ -450,7 +729,7 @@ Language *getData() {
 	data[2].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[2][6]) + 1));
 	strcpy(data[2].commands[6].lib, libr[2][6]);
 
-	nam[2][6] = "getchar\0";
+	nam[2][6] = "Putchar\0";
 	data[2].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[2][6]) + 1));
 	strcpy(data[2].commands[6].name, nam[2][6]);
 
@@ -544,7 +823,7 @@ Language *getData() {
 
 	//memmory allocation
 
-	data[2].commands[11].type = IN_PUT;
+	data[2].commands[11].type = LOGIC;
 
 	libr[2][11] = "stdio.h stdlib.h\0";
 	data[2].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[2][11]) + 1));
@@ -606,8 +885,6 @@ Language *getData() {
 	data[3].name = (char*)malloc(sizeof(char)*(strlen(name4) + 1));
 	strcpy(data[3].name, name4);
 	data[3].commands = (Command*)malloc(sizeof(Command) * 14);
-	data[3].commands[0] = command3;
-	data[3].commands[0] = command4;
 	data[3].numberOfCommands = 14;
 
 	//command printf
@@ -832,7 +1109,7 @@ Language *getData() {
 
 	//memmory allocation
 
-	data[3].commands[11].type = IN_PUT;
+	data[3].commands[11].type = LOGIC;
 
 	libr[3][11] = "System.Runtime.InteropServices\0";
 	data[3].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][11]) + 1));
@@ -889,6 +1166,292 @@ Language *getData() {
 	com[3][13] = "int i = 1;switch(i){\n\tcase 1:\n\t\tConsole.WriteLine(\"args1\");\n\t\tbreak;\n\tcase 2:\n\t\tConsole.WriteLine(\"args2\");\n\t\tbreak;\n\tcase default:\n\t\tConsole.WriteLine(\"Case: default\");\n\t\tbreak;\n}\0";
 	data[3].commands[13].syntax = (char*)malloc(sizeof(char)*(strlen(com[3][13]) + 1));
 	strcpy(data[3].commands[13].syntax, com[3][13]);
+
+	char *name5 = "Python\0";
+	data[4].name = (char*)malloc(sizeof(char)*(strlen(name) + 1));
+	strcpy(data[4].name, name);
+	data[4].commands = (Command*)malloc(sizeof(Command) * 14);
+	data[4].numberOfCommands = 14;
+
+	//command Print
+
+	data[4].commands[0].type = OUT_PUT;
+
+	libr[4][0] = "null\0";
+	data[4].commands[0].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][0]) + 1));
+	strcpy(data[4].commands[0].lib, libr[4][0]);
+
+	nam[4][0] = "Print\0";
+	data[4].commands[0].name = (char*)malloc(sizeof(char)*(strlen(nam[4][0]) + 1));
+	strcpy(data[4].commands[0].name, nam[4][0]);
+
+	dis[4][0] = "Print is a standard output function used in Python.\0";
+	data[4].commands[0].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][0]) + 1));
+	strcpy(data[4].commands[0].disc, dis[4][0]);
+
+	com[4][0] = "print \"Hello, Python!\"\0";
+	data[4].commands[0].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][0]) + 1));
+	strcpy(data[4].commands[0].syntax, com[4][0]);
+
+	//command Scanf Int
+
+	data[4].commands[1].type = IN_PUT;
+
+	//libr[4][1] = NULL;
+	data[4].commands[1].lib = NULL;
+	//strcpy(data[4].commands[1].lib, libr[4][1]);
+
+	nam[4][1] = "Scanf Int\0";
+	data[4].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[4][1]) + 1));
+	strcpy(data[4].commands[1].name, nam[4][1]);
+
+	dis[4][1] = "Python does not return inputs as int.\0";
+	data[4].commands[1].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][1]) + 1));
+	strcpy(data[4].commands[1].disc, dis[4][1]);
+
+	com[4][1] = "null\0";
+	data[4].commands[1].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][1]) + 1));
+	strcpy(data[4].commands[1].syntax, com[4][1]);
+
+	//command Scanf Double
+
+	data[4].commands[2].type = IN_PUT;
+
+	libr[4][2] = "null\0";
+	data[4].commands[1].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][2]) + 1));
+	strcpy(data[4].commands[2].lib, libr[4][2]);
+
+	nam[4][2] = "Scanf Double\0";
+	data[4].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[4][2]) + 1));
+	strcpy(data[4].commands[2].name, nam[4][2]);
+
+	dis[4][2] = "Python does not return inputs as double.\0";
+	data[4].commands[2].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][2]) + 1));
+	strcpy(data[4].commands[2].disc, dis[4][2]);
+
+	com[4][2] = "null\0";
+	data[4].commands[2].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][2]) + 1));
+	strcpy(data[4].commands[2].syntax, com[4][1]);
+
+	//command Scanf Char
+
+	data[4].commands[3].type = IN_PUT;
+
+	libr[4][3] = "null\0";
+	data[4].commands[3].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][3]) + 1));
+	strcpy(data[4].commands[3].lib, libr[4][3]);
+
+	nam[4][3] = "Scanf Char\0";
+	data[4].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[4][3]) + 1));
+	strcpy(data[4].commands[3].name, nam[4][3]);
+
+	dis[4][3] = "Python does not return inputs as char.\0";
+	data[4].commands[1].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][3]) + 1));
+	strcpy(data[4].commands[3].disc, dis[4][3]);
+
+	com[4][3] = "null\0";
+	data[4].commands[1].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][3]) + 1));
+	strcpy(data[4].commands[3].syntax, com[4][3]);
+
+	//command Scanf String
+
+	data[4].commands[4].type = IN_PUT;
+
+	libr[4][4] = "null\0";
+	data[4].commands[4].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][4]) + 1));
+	strcpy(data[4].commands[4].lib, libr[4][4]);
+
+	nam[4][4] = "Scanf String\0";
+	data[4].commands[4].name = (char*)malloc(sizeof(char)*(strlen(nam[4][4]) + 1));
+	strcpy(data[4].commands[4].name, nam[4][4]);
+
+	dis[4][4] = "Python only return inputs as Strings.\0";
+	data[4].commands[4].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][4]) + 1));
+	strcpy(data[4].commands[4].disc, dis[4][4]);
+
+	com[4][4] = "user_input = input('Give me a number: ')\n user_input\n print ('Your number was %s' % (user_input))\0";
+	data[4].commands[4].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][4]) + 1));
+	strcpy(data[4].commands[4].syntax, com[4][4]);
+
+	//command Putchar
+
+	data[4].commands[5].type = OUT_PUT;
+
+	libr[4][5] = "null\0";
+	data[4].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][5]) + 1));
+	strcpy(data[4].commands[5].lib, libr[4][5]);
+
+	nam[4][5] = "Putchar\0";
+	data[4].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[4][5]) + 1));
+	strcpy(data[4].commands[5].name, nam[4][5]);
+
+	dis[4][5] = "Putchar() takes an int value and outputs a single character to stdou.\0";
+	data[4].commands[5].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][5]) + 1));
+	strcpy(data[4].commands[5].disc, dis[4][5]);
+
+	com[4][5] = "sys.stdout.write(char(c))\0";
+	data[4].commands[5].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][5]) + 1));
+	strcpy(data[4].commands[5].syntax, com[4][5]);
+
+	//command Getchar
+
+	data[4].commands[6].type = IN_PUT;
+
+	libr[4][6] = "readchar\0";
+	data[4].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][6]) + 1));
+	strcpy(data[4].commands[6].lib, libr[4][6]);
+
+	nam[4][6] = "Putchar\0";
+	data[4].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[4][6]) + 1));
+	strcpy(data[4].commands[6].name, nam[4][6]);
+
+	dis[4][6] = "For reading one single character we use the readchar library, which is in part based on the ActiveState recipe.\0";
+	data[4].commands[6].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][6]) + 1));
+	strcpy(data[4].commands[6].disc, dis[4][6]);
+
+	com[4][6] = "import readchar\n print(\"Reading a char:\")\n print(repr(readchar.readchar()))\0";
+	data[4].commands[6].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][6]) + 1));
+	strcpy(data[4].commands[6].syntax, com[4][6]);
+
+	//command For
+
+	data[4].commands[7].type = ARITMETIC;
+
+	libr[4][7] = "null\0";
+	data[4].commands[7].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][7]) + 1));
+	strcpy(data[4].commands[7].lib, libr[4][7]);
+
+	nam[4][7] = "For\0";
+	data[4].commands[7].name = (char*)malloc(sizeof(char)*(strlen(nam[4][7]) + 1));
+	strcpy(data[4].commands[7].name, nam[4][7]);
+
+	dis[4][7] = "The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object.\0";
+	data[4].commands[7].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][7]) + 1));
+	strcpy(data[4].commands[7].disc, dis[4][7]);
+
+	com[4][7] = "words = ['cat', 'window', 'defenestrate']\n for w in words:\n print w, len(w)\0";
+	data[4].commands[7].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][7]) + 1));
+	strcpy(data[4].commands[7].syntax, com[4][7]);
+
+	//command While
+
+	data[4].commands[8].type = LOGIC;
+
+	libr[4][8] = "null\0";
+	data[4].commands[8].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][8]) + 1));
+	strcpy(data[4].commands[8].lib, libr[4][8]);
+
+	nam[4][8] = "While\0";
+	data[4].commands[8].name = (char*)malloc(sizeof(char)*(strlen(nam[4][8]) + 1));
+	strcpy(data[4].commands[8].name, nam[4][8]);
+
+	dis[4][8] = "The while statement is used for repeated execution as long as an expression is true.\0";
+	data[4].commands[8].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][8]) + 1));
+	strcpy(data[4].commands[8].disc, dis[4][8]);
+
+	com[4][8] = "number = 1\n while (number < 10):\n print(number)\n number = number + 1\0";
+	data[4].commands[8].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][8]) + 1));
+	strcpy(data[4].commands[8].syntax, com[4][8]);
+
+	//command Do_While
+
+	data[4].commands[9].type = LOGIC;
+
+	libr[4][9] = "null\0";
+	data[4].commands[9].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][9]) + 1));
+	strcpy(data[4].commands[9].lib, libr[4][9]);
+
+	nam[4][9] = "Do_While\0";
+	data[4].commands[9].name = (char*)malloc(sizeof(char)*(strlen(nam[4][9]) + 1));
+	strcpy(data[4].commands[9].name, nam[4][9]);
+
+	dis[4][9] = "You can only emulate do while loops if you really want to use them.\0";
+	data[4].commands[9].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][9]) + 1));
+	strcpy(data[4].commands[9].disc, dis[4][9]);
+
+	com[4][9] = "null\0";
+	data[4].commands[9].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][9]) + 1));
+	strcpy(data[4].commands[9].syntax, com[4][9]);
+
+	//command If
+
+	data[4].commands[10].type = LOGIC;
+
+	libr[4][10] = "null\0";
+	data[4].commands[10].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][10]) + 1));
+	strcpy(data[4].commands[10].lib, libr[4][10]);
+
+	nam[4][10] = "If\0";
+	data[4].commands[10].name = (char*)malloc(sizeof(char)*(strlen(nam[4][10]) + 1));
+	strcpy(data[4].commands[10].name, nam[4][10]);
+
+	dis[4][10] = "The if statement is used for conditional execution.\0";
+	data[4].commands[10].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][10]) + 1));
+	strcpy(data[4].commands[10].disc, dis[4][10]);
+
+	com[4][10] = "var = 100\n if var == 200:\n print \"Our number is 200\"\n print var\n elif var == 100:\n print \"Our number is 100\"\n print var\n else:\n print \"Number is not 100 or 200\"\n print var\0";
+	data[4].commands[10].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][10]) + 1));
+	strcpy(data[4].commands[10].syntax, com[4][10]);
+
+	//command Malloc
+
+	data[4].commands[11].type = IN_PUT;
+
+	libr[4][11] = "null\0";
+	data[4].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][11]) + 1));
+	strcpy(data[4].commands[11].lib, libr[4][11]);
+
+	nam[4][11] = "Malloc\0";
+	data[4].commands[11].name = (char*)malloc(sizeof(char)*(strlen(nam[4][11]) + 1));
+	strcpy(data[4].commands[11].name, nam[4][11]);
+
+	dis[4][11] = "Allocates n bytes and returns a pointer of type void* to the allocated memory, or NULL if the request fails.\0";
+	data[4].commands[11].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][11]) + 1));
+	strcpy(data[4].commands[11].disc, dis[4][11]);
+
+	com[4][11] = "void* PyMem_RawMalloc(size_t n)\0";
+	data[4].commands[11].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][11]) + 1));
+	strcpy(data[4].commands[11].syntax, com[4][11]);
+
+	//command Enum
+
+	data[4].commands[12].type = LOGIC;
+
+	libr[4][12] = "null\0";
+	data[4].commands[12].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][12]) + 1));
+	strcpy(data[4].commands[12].lib, libr[4][12]);
+
+	nam[4][12] = "If\0";
+	data[4].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[4][12]) + 1));
+	strcpy(data[4].commands[12].name, nam[4][12]);
+
+	dis[4][12] = "The if statement is used for conditional execution.\0";
+	data[4].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][12]) + 1));
+	strcpy(data[4].commands[12].disc, dis[4][12]);
+
+	com[4][12] = "class Animals(Enum):\n ant = 1\n bee = 2\n cat = 3\n dog = 4\0";
+	data[4].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][12]) + 1));
+	strcpy(data[4].commands[12].syntax, com[4][12]);
+
+	//command Switch
+
+	data[4].commands[13].type = LOGIC;
+
+	libr[4][13] = "null\0";
+	data[4].commands[13].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][13]) + 1));
+	strcpy(data[4].commands[13].lib, libr[4][13]);
+
+	nam[4][13] = "Switch\0";
+	data[4].commands[13].name = (char*)malloc(sizeof(char)*(strlen(nam[4][13]) + 1));
+	strcpy(data[4].commands[13].name, nam[4][13]);
+
+	dis[4][13] = "Python does not appear to have a switch statement.\0";
+	data[4].commands[13].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][13]) + 1));
+	strcpy(data[4].commands[13].disc, dis[4][13]);
+
+	com[4][13] = "null\0";
+	data[4].commands[13].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][13]) + 1));
+	strcpy(data[4].commands[13].syntax, com[4][13]);
 
 	
 
