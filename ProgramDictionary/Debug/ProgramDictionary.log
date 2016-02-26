@@ -1,1 +1,7 @@
-﻿  ProgramDictionary.vcxproj -> A:\Učivo\VS programy\Slovník pre programátorov\projektTrojka-master\Debug\ProgramDictionary.exe
+﻿  Main.cpp
+a:\učivo\vs programy\slovník pre programátorov\projekttrojka-master\programdictionary\dictionary.h(18): warning C4091: 'typedef ': ignored on left of 'Level' when no variable is declared
+a:\učivo\vs programy\slovník pre programátorov\projekttrojka-master\programdictionary\dictionary.h(28): warning C4091: 'typedef ': ignored on left of 'Color' when no variable is declared
+a:\učivo\vs programy\slovník pre programátorov\projekttrojka-master\programdictionary\main.cpp(13): warning C4101: 'command': unreferenced local variable
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  LINK : A:\Učivo\VS programy\Slovník pre programátorov\projektTrojka-master\Debug\ProgramDictionary.exe not found or not built by the last incremental link; performing full link
+  ProgramDictionary.vcxproj -> A:\Učivo\VS programy\Slovník pre programátorov\projektTrojka-master\Debug\ProgramDictionary.exe

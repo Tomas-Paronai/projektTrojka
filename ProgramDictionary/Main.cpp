@@ -21,7 +21,7 @@ int main() {
 		}
 		else if (level == COMM) {
 			printData(language, type, 0, data);
-			numberOfAvailableCommands = getAvailableCommandsCount(language, getTypeEnum(c - '0'),data);
+			numberOfAvailableCommands = getAvailableCommandsCount(language, getTypeEnum(type - '0'),data);
 		}
 		else if (level == DET) {
 			printData(language, type, c, data);
