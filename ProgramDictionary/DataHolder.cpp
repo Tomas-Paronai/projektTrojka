@@ -277,7 +277,7 @@ Language *getData() {
 	data[0].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][12]) + 1));
 	strcpy(data[0].commands[12].disc, dis[0][12]);
 
-	com[0][12] = "private enum Level {\n HIGH,MEDIUM,LOW\n }\0";
+	com[0][12] = "public enum Margin\n{\n\tTOP,\n\tRIGHT,\n\tBOTTOM,\n\tLEFT\n}\n\npublic static void main(String[] args){\n\tint count = 1;\n\tfor (Margin m: Margin.values()) {\n\t\tSystem.out.printf(\"Margin %d = %s\", count++, m);\n\t}\n}\0";
 	data[0].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][12]) + 1));
 	strcpy(data[0].commands[12].syntax, com[0][12]);
 
@@ -1295,7 +1295,7 @@ Language *getData() {
 	data[4].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][6]) + 1));
 	strcpy(data[4].commands[6].lib, libr[4][6]);
 
-	nam[4][6] = "Putchar\0";
+	nam[4][6] = "Getchar\0";
 	data[4].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[4][6]) + 1));
 	strcpy(data[4].commands[6].name, nam[4][6]);
 
@@ -1303,7 +1303,7 @@ Language *getData() {
 	data[4].commands[6].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][6]) + 1));
 	strcpy(data[4].commands[6].disc, dis[4][6]);
 
-	com[4][6] = "import readchar\n print(\"Reading a char:\")\n print(repr(readchar.readchar()))\0";
+	com[4][6] = "import readchar\n print(\"Reading a char:\")\n print(repr(readchar.readchr()))\0";
 	data[4].commands[6].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][6]) + 1));
 	strcpy(data[4].commands[6].syntax, com[4][6]);
 
@@ -1415,15 +1415,15 @@ Language *getData() {
 	data[4].commands[12].lib = NULL;
 	//strcpy(data[4].commands[12].lib, libr[4][12]);
 
-	nam[4][12] = "If\0";
+	nam[4][12] = "Enum\0";
 	data[4].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[4][12]) + 1));
 	strcpy(data[4].commands[12].name, nam[4][12]);
 
-	dis[4][12] = "The if statement is used for conditional execution.\0";
+	dis[4][12] = "An enumeration is a set of symbolic names (members) bound to unique, constant values.\0";
 	data[4].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][12]) + 1));
 	strcpy(data[4].commands[12].disc, dis[4][12]);
 
-	com[4][12] = "class Animals(Enum):\n ant = 1\n bee = 2\n cat = 3\n dog = 4\0";
+	com[4][12] = "class Animals(Enum):\n ant = 1\n bee = 2\n cat = 3\n\n def __init__(self, Type):\n self.value = Type\n def __str__(self):\n\n if self.value == Animals.bee:\n return 'Bee'\n if self.value == Animals.cat:\n return 'Cat'\n\n def __eq__(self,y):\n return self.value==y.value\0";
 	data[4].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][12]) + 1));
 	strcpy(data[4].commands[12].syntax, com[4][12]);
 

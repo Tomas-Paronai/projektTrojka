@@ -1,1 +1,4 @@
-﻿  ProgramDictionary.vcxproj -> C:\Users\tomas\Documents\Visual Studio 2015\Projects\projektTrojka\Debug\ProgramDictionary.exe
+﻿  DataHolder.cpp
+a:\učivo\vs programy\slovník pre programátorov\projekttrojka-master\programdictionary\dataholder.cpp(16): warning C4101: 'j': unreferenced local variable
+a:\učivo\vs programy\slovník pre programátorov\projekttrojka-master\programdictionary\dataholder.cpp(16): warning C4101: 'i': unreferenced local variable
+  ProgramDictionary.vcxproj -> A:\Učivo\VS programy\Slovník pre programátorov\projektTrojka-master\Debug\ProgramDictionary.exe
