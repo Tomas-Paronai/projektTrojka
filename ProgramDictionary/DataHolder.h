@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define SIZE_LANGUAGE 4
+#define SIZE_LANGUAGE 5
 #define  TYPE_SIZE 4
 
 typedef enum CommType {

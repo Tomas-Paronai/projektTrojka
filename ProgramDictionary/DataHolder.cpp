@@ -19,8 +19,6 @@ Language *getData() {
 	data[0].name = (char*)malloc(sizeof(char)*(strlen(name) + 1));
 	strcpy(data[0].name, name);
 	data[0].commands = (Command*)malloc(sizeof(Command) * 14);
-	data[0].commands[0] = command1;
-	data[0].commands[1] = command2;
 	data[0].numberOfCommands = 14;
 
 	//command Println
@@ -28,8 +26,8 @@ Language *getData() {
 	data[0].commands[0].type = OUT_PUT;
 
 	libr[0][0] = "null\0";
-	data[0].commands[0].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][0]) + 1));
-	strcpy(data[0].commands[0].lib, libr[0][0]);
+	data[0].commands[0].lib = NULL;
+	//strcpy(data[0].commands[0].lib, libr[0][0]);
 
 	nam[0][0] = "Println\0";
 	data[0].commands[0].name = (char*)malloc(sizeof(char)*(strlen(nam[0][0]) + 1));
@@ -88,8 +86,8 @@ Language *getData() {
 	data[0].commands[3].type = IN_PUT;
 
 	libr[0][3] = "null\0";
-	data[0].commands[3].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][3]) + 1));
-	strcpy(data[0].commands[3].lib, libr[0][3]);
+	data[0].commands[3].lib = NULL;
+	//strcpy(data[0].commands[3].lib, libr[0][3]);
 
 	nam[0][3] = "Scanner char\0";
 	data[0].commands[3].name = (char*)malloc(sizeof(char)*(strlen(nam[0][3]) + 1));
@@ -100,8 +98,8 @@ Language *getData() {
 	strcpy(data[0].commands[3].disc, dis[0][3]);
 
 	com[0][3] = "null\0";
-	data[0].commands[3].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][3]) + 1));
-	strcpy(data[0].commands[3].syntax, com[0][3]);
+	data[0].commands[3].syntax = NULL;
+	//strcpy(data[0].commands[3].syntax, com[0][3]);
 
 	//command scanner string
 
@@ -168,10 +166,10 @@ Language *getData() {
 	data[0].commands[7].type = ARITMETIC;
 
 	libr[0][7] = "null\0";
-	data[0].commands[7].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][7]) + 1));
-	strcpy(data[0].commands[7].lib, libr[0][7]);
+	data[0].commands[7].lib = NULL;
+	//strcpy(data[0].commands[7].lib, libr[0][7]);
 
-	nam[0][7] = "Do_While\0";
+	nam[0][7] = "For\0";
 	data[0].commands[7].name = (char*)malloc(sizeof(char)*(strlen(nam[0][7]) + 1));
 	strcpy(data[0].commands[7].name, nam[0][7]);
 
@@ -188,8 +186,8 @@ Language *getData() {
 	data[0].commands[8].type = LOGIC;
 
 	libr[0][8] = "null\0";
-	data[0].commands[8].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][8]) + 1));
-	strcpy(data[0].commands[8].lib, libr[0][8]);
+	data[0].commands[8].lib = NULL;
+	//strcpy(data[0].commands[8].lib, libr[0][8]);
 
 	nam[0][8] = "While\0";
 	data[0].commands[8].name = (char*)malloc(sizeof(char)*(strlen(nam[0][8]) + 1));
@@ -199,7 +197,7 @@ Language *getData() {
 	data[0].commands[8].disc = (char*)malloc(sizeof(char)*(strlen(dis[0][8]) + 1));
 	strcpy(data[0].commands[8].disc, dis[0][8]);
 
-	com[0][5] = "int n=0;\n while(n<=5) {\n System.out.println(n);\n n++;\n }\0";
+	com[0][8] = "int n=0;\n while(n<=5) {\n System.out.println(n);\n n++;\n }\0";
 	data[0].commands[8].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][8]) + 1));
 	strcpy(data[0].commands[8].syntax, com[0][8]);
 
@@ -208,8 +206,8 @@ Language *getData() {
 	data[0].commands[9].type = LOGIC;
 
 	libr[0][9] = "null\0";
-	data[0].commands[9].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][9]) + 1));
-	strcpy(data[0].commands[9].lib, libr[0][9]);
+	data[0].commands[9].lib = NULL;
+	//strcpy(data[0].commands[9].lib, libr[0][9]);
 
 	nam[0][9] = "Do_While\0";
 	data[0].commands[9].name = (char*)malloc(sizeof(char)*(strlen(nam[0][9]) + 1));
@@ -228,8 +226,8 @@ Language *getData() {
 	data[0].commands[10].type = LOGIC;
 
 	libr[0][10] = "null\0";
-	data[0].commands[10].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][10]) + 1));
-	strcpy(data[0].commands[10].lib, libr[0][10]);
+	data[0].commands[10].lib = NULL;
+	//strcpy(data[0].commands[10].lib, libr[0][10]);
 
 	nam[0][10] = "If\0";
 	data[0].commands[10].name = (char*)malloc(sizeof(char)*(strlen(nam[0][10]) + 1));
@@ -245,11 +243,11 @@ Language *getData() {
 
 	//Mallloc
 
-	data[0].commands[11].type = IN_PUT;
+	data[0].commands[11].type = LOGIC;
 
 	libr[0][11] = "null\0";
-	data[0].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][11]) + 1));
-	strcpy(data[0].commands[11].lib, libr[0][11]);
+	data[0].commands[11].lib = NULL;
+	//strcpy(data[0].commands[11].lib, libr[0][11]);
 
 	nam[0][11] = "Malloc\0";
 	data[0].commands[11].name = (char*)malloc(sizeof(char)*(strlen(nam[0][11]) + 1));
@@ -260,16 +258,16 @@ Language *getData() {
 	strcpy(data[0].commands[11].disc, dis[0][11]);
 
 	com[0][11] = "null\0";
-	data[0].commands[11].syntax = (char*)malloc(sizeof(char)*(strlen(com[0][11]) + 1));
-	strcpy(data[0].commands[11].syntax, com[0][11]);
+	data[0].commands[11].syntax = NULL;
+	//strcpy(data[0].commands[11].syntax, com[0][11]);
 
 	//command Enum
 
 	data[0].commands[12].type = LOGIC;
 
 	libr[0][12] = "null\0";
-	data[0].commands[12].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][12]) + 1));
-	strcpy(data[0].commands[12].lib, libr[0][12]);
+	data[0].commands[12].lib = NULL;
+	//strcpy(data[0].commands[12].lib, libr[0][12]);
 
 	nam[0][12] = "Enum\0";
 	data[0].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[0][12]) + 1));
@@ -289,8 +287,8 @@ Language *getData() {
 	data[0].commands[13].type = LOGIC;
 
 	libr[0][13] = "null\0";
-	data[0].commands[13].lib = (char*)malloc(sizeof(char)*(strlen(libr[0][13]) + 1));
-	strcpy(data[0].commands[13].lib, libr[0][13]);
+	data[0].commands[13].lib = NULL;
+	//strcpy(data[0].commands[13].lib, libr[0][13]);
 
 	nam[0][13] = "Switch\0";
 	data[0].commands[13].name = (char*)malloc(sizeof(char)*(strlen(nam[0][13]) + 1));
@@ -308,8 +306,6 @@ Language *getData() {
 	data[1].name = (char*)malloc(sizeof(char)*(strlen(name2) + 1));
 	strcpy(data[1].name, name2);
 	data[1].commands = (Command*)malloc(sizeof(Command) * 14);
-	data[1].commands[0] = command3;
-	data[1].commands[0] = command4;
 	data[1].numberOfCommands = 14;
 
 	//command printf
@@ -528,7 +524,7 @@ Language *getData() {
 	data[1].commands[10].disc = (char*)malloc(sizeof(char)*(strlen(dis[1][10]) + 1));
 	strcpy(data[1].commands[10].disc, dis[1][10]);
 
-	com[1][10] = "if(arg1){\n\tprintf(\"arg1\");\nelse\n\tprintf(\"arg2\");\0";
+	com[1][10] = "if(arg1){\n\tprintf(\"arg1\");\nelse\n\tprintf(\"arg2\");\n}\0";
 	data[1].commands[10].syntax = (char*)malloc(sizeof(char)*(strlen(com[1][10]) + 1));
 	strcpy(data[1].commands[10].syntax, com[1][10]);
 
@@ -568,7 +564,7 @@ Language *getData() {
 	data[1].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[1][12]) + 1));
 	strcpy(data[1].commands[12].disc, dis[1][12]);
 
-	com[1][12] = "typedef enum{\n\targ1\n\targ2\n}\n\nint i;\nchar* answer;\nscanf(\"%d\", &i)if (i == 1){\n\tanswer = arg1;\nelse\n\tanswer = arg2;";
+	com[1][12] = "typedef enum Answer{\n\targ1\n\targ2\n};\n\nint i;\nAnswer answer;\nscanf(\"%d\", &i);\nif (i == 1){\n\tanswer = arg1;\n}\nelse{\n\tanswer = arg2;\n}";
 	data[1].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[1][12]) + 1));
 	strcpy(data[1].commands[12].syntax, com[1][12]);
 
@@ -597,8 +593,6 @@ Language *getData() {
 	data[2].name = (char*)malloc(sizeof(char)*(strlen(name3) + 1));
 	strcpy(data[2].name, name3);
 	data[2].commands = (Command*)malloc(sizeof(Command) * 14);
-	data[2].commands[0] = command3;
-	data[2].commands[0] = command4;
 	data[2].numberOfCommands = 14;
 
 	//command printf
@@ -817,7 +811,7 @@ Language *getData() {
 	data[2].commands[10].disc = (char*)malloc(sizeof(char)*(strlen(dis[2][10]) + 1));
 	strcpy(data[2].commands[10].disc, dis[2][10]);
 
-	com[2][10] = "if(arg1){\n\tprintf(\"arg1\");\nelse\n\tprintf(\"arg2\");\0";
+	com[2][10] = "if(arg1){\n\tprintf(\"arg1\");\nelse\n\tprintf(\"arg2\");\n}\0";
 	data[2].commands[10].syntax = (char*)malloc(sizeof(char)*(strlen(com[2][10]) + 1));
 	strcpy(data[2].commands[10].syntax, com[2][10]);
 
@@ -857,7 +851,7 @@ Language *getData() {
 	data[2].commands[12].disc = (char*)malloc(sizeof(char)*(strlen(dis[2][12]) + 1));
 	strcpy(data[2].commands[12].disc, dis[2][12]);
 
-	com[2][12] = "typedef enum{\n\targ1\n\targ2\n}\n\nint i;\nchar* answer;\nscanf(\"%d\", &i)if (i == 1){\n\tanswer = arg1;\nelse\n\tanswer = arg2;";
+	com[2][12] = "typedef enum Answer{\n\targ1\n\targ2\n};\n\nint i;\nAnswer answer;\nscanf(\"%d\", &i);\nif (i == 1){\n\tanswer = arg1;\n}\nelse{\n\tanswer = arg2;\n}";
 	data[2].commands[12].syntax = (char*)malloc(sizeof(char)*(strlen(com[2][12]) + 1));
 	strcpy(data[2].commands[12].syntax, com[2][12]);
 
@@ -892,8 +886,8 @@ Language *getData() {
 	data[3].commands[0].type = OUT_PUT;
 
 	libr[3][0] = "null\0";
-	data[3].commands[0].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][0]) + 1));
-	strcpy(data[3].commands[0].lib, libr[3][0]);
+	data[3].commands[0].lib = NULL;
+	//strcpy(data[3].commands[0].lib, libr[3][0]);
 
 	nam[3][0] = "Console.Write\0";
 	data[3].commands[0].name = (char*)malloc(sizeof(char)*(strlen(nam[3][0]) + 1));
@@ -912,8 +906,8 @@ Language *getData() {
 	data[3].commands[1].type = IN_PUT;
 
 	libr[3][1] = "null\0";
-	data[3].commands[1].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][1]) + 1));
-	strcpy(data[3].commands[1].lib, libr[3][1]);
+	data[3].commands[1].lib = NULL;
+	//strcpy(data[3].commands[1].lib, libr[3][1]);
 
 	nam[3][1] = "Console.ReadLine int\0";
 	data[3].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[3][1]) + 1));
@@ -932,8 +926,8 @@ Language *getData() {
 	data[3].commands[2].type = IN_PUT;
 
 	libr[3][2] = "null\0";
-	data[3].commands[2].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][2]) + 1));
-	strcpy(data[3].commands[2].lib, libr[3][2]);
+	data[3].commands[2].lib = NULL;
+	//strcpy(data[3].commands[2].lib, libr[3][2]);
 
 	nam[3][2] = "Console.ReadLine float or double\0";
 	data[3].commands[2].name = (char*)malloc(sizeof(char)*(strlen(nam[3][2]) + 1));
@@ -952,8 +946,8 @@ Language *getData() {
 	data[3].commands[3].type = IN_PUT;
 
 	libr[3][3] = "null\0";
-	data[3].commands[3].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][3]) + 1));
-	strcpy(data[3].commands[3].lib, libr[3][3]);
+	data[3].commands[3].lib = NULL;
+	//strcpy(data[3].commands[3].lib, libr[3][3]);
 
 	nam[3][3] = "Console.ReadLine character\0";
 	data[3].commands[3].name = (char*)malloc(sizeof(char)*(strlen(nam[3][3]) + 1));
@@ -972,8 +966,8 @@ Language *getData() {
 	data[3].commands[4].type = IN_PUT;
 
 	libr[3][4] = "null\0";
-	data[3].commands[4].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][4]) + 1));
-	strcpy(data[3].commands[4].lib, libr[3][4]);
+	data[3].commands[4].lib = NULL;
+	//strcpy(data[3].commands[4].lib, libr[3][4]);
 
 	nam[3][4] = "Console.ReadLine string\0";
 	data[3].commands[4].name = (char*)malloc(sizeof(char)*(strlen(nam[3][4]) + 1));
@@ -992,18 +986,18 @@ Language *getData() {
 	data[3].commands[5].type = IN_PUT;
 
 	libr[3][5] = "null\0";
-	data[3].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][5]) + 1));
-	strcpy(data[3].commands[5].lib, libr[3][5]);
+	data[3].commands[5].lib = NULL;
+	//strcpy(data[3].commands[5].lib, libr[3][5]);
 
 	nam[3][5] = "Getchar\0";
 	data[3].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[3][5]) + 1));
 	strcpy(data[3].commands[5].name, nam[3][5]);
 
-	dis[3][5] = "null\0";
+	dis[3][5] = "This command find out, what of character you write at console and save it to the variable\0";
 	data[3].commands[5].disc = (char*)malloc(sizeof(char)*(strlen(dis[3][5]) + 1));
 	strcpy(data[3].commands[5].disc, dis[3][5]);
 
-	com[3][5] = "null\0";
+	com[3][5] = "char x;\nx = System.Console.Read();\0";
 	data[3].commands[5].syntax = (char*)malloc(sizeof(char)*(strlen(com[3][5]) + 1));
 	strcpy(data[3].commands[5].syntax, com[3][5]);
 
@@ -1012,18 +1006,18 @@ Language *getData() {
 	data[3].commands[6].type = OUT_PUT;
 
 	libr[3][6] = "null\0";
-	data[3].commands[6].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][6]) + 1));
-	strcpy(data[3].commands[6].lib, libr[3][6]);
+	data[3].commands[6].lib = NULL;
+	//strcpy(data[3].commands[6].lib, libr[3][6]);
 
 	nam[3][6] = "Putchar\0";
 	data[3].commands[6].name = (char*)malloc(sizeof(char)*(strlen(nam[3][6]) + 1));
 	strcpy(data[3].commands[6].name, nam[3][6]);
 
-	dis[3][6] = "null\0";
+	dis[3][6] = "This command writes everything you want at console\0";
 	data[3].commands[6].disc = (char*)malloc(sizeof(char)*(strlen(dis[3][6]) + 1));
 	strcpy(data[3].commands[6].disc, dis[3][6]);
 
-	com[3][6] = "null\0";
+	com[3][6] = "char x;\nx = System.Console.Write();\0";
 	data[3].commands[6].syntax = (char*)malloc(sizeof(char)*(strlen(com[3][6]) + 1));
 	strcpy(data[3].commands[6].syntax, com[3][6]);
 
@@ -1032,8 +1026,8 @@ Language *getData() {
 	data[3].commands[7].type = ARITMETIC;
 
 	libr[3][7] = "null\0";
-	data[3].commands[7].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][7]) + 1));
-	strcpy(data[3].commands[7].lib, libr[3][7]);
+	data[3].commands[7].lib = NULL;
+	//strcpy(data[3].commands[7].lib, libr[3][7]);
 
 	nam[3][7] = "for\0";
 	data[3].commands[7].name = (char*)malloc(sizeof(char)*(strlen(nam[3][7]) + 1));
@@ -1052,8 +1046,8 @@ Language *getData() {
 	data[3].commands[8].type = LOGIC;
 
 	libr[3][8] = "null\0";
-	data[3].commands[8].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][8]) + 1));
-	strcpy(data[3].commands[8].lib, libr[3][8]);
+	data[3].commands[8].lib = NULL;
+	//strcpy(data[3].commands[8].lib, libr[3][8]);
 
 	nam[3][8] = "while\0";
 	data[3].commands[8].name = (char*)malloc(sizeof(char)*(strlen(nam[3][8]) + 1));
@@ -1072,8 +1066,8 @@ Language *getData() {
 	data[3].commands[9].type = LOGIC;
 
 	libr[3][9] = "null\0";
-	data[3].commands[9].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][9]) + 1));
-	strcpy(data[3].commands[9].lib, libr[3][9]);
+	data[3].commands[9].lib = NULL;
+	//strcpy(data[3].commands[9].lib, libr[3][9]);
 
 	nam[3][9] = "do while\0";
 	data[3].commands[9].name = (char*)malloc(sizeof(char)*(strlen(nam[3][9]) + 1));
@@ -1092,8 +1086,8 @@ Language *getData() {
 	data[3].commands[10].type = LOGIC;
 
 	libr[3][10] = "null\0";
-	data[3].commands[10].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][10]) + 1));
-	strcpy(data[3].commands[10].lib, libr[3][10]);
+	data[3].commands[10].lib = NULL;
+	//strcpy(data[3].commands[10].lib, libr[3][10]);
 
 	nam[3][10] = "if else\0";
 	data[3].commands[10].name = (char*)malloc(sizeof(char)*(strlen(nam[3][10]) + 1));
@@ -1132,8 +1126,8 @@ Language *getData() {
 	data[3].commands[12].type = LOGIC;
 
 	libr[3][12] = "null\0";
-	data[3].commands[12].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][12]) + 1));
-	strcpy(data[3].commands[12].lib, libr[3][12]);
+	data[3].commands[12].lib = NULL;
+	//strcpy(data[3].commands[12].lib, libr[3][12]);
 
 	nam[3][12] = "enum\0";
 	data[3].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[3][12]) + 1));
@@ -1152,8 +1146,8 @@ Language *getData() {
 	data[3].commands[13].type = LOGIC;
 
 	libr[3][13] = "null\0";
-	data[3].commands[13].lib = (char*)malloc(sizeof(char)*(strlen(libr[3][13]) + 1));
-	strcpy(data[3].commands[13].lib, libr[3][13]);
+	data[3].commands[13].lib = NULL;
+	//strcpy(data[3].commands[13].lib, libr[3][13]);
 
 	nam[3][13] = "switch\0";
 	data[3].commands[13].name = (char*)malloc(sizeof(char)*(strlen(nam[3][13]) + 1));
@@ -1168,8 +1162,8 @@ Language *getData() {
 	strcpy(data[3].commands[13].syntax, com[3][13]);
 
 	char *name5 = "Python\0";
-	data[4].name = (char*)malloc(sizeof(char)*(strlen(name) + 1));
-	strcpy(data[4].name, name);
+	data[4].name = (char*)malloc(sizeof(char)*(strlen(name5) + 1));
+	strcpy(data[4].name	, name5);
 	data[4].commands = (Command*)malloc(sizeof(Command) * 14);
 	data[4].numberOfCommands = 14;
 
@@ -1178,8 +1172,8 @@ Language *getData() {
 	data[4].commands[0].type = OUT_PUT;
 
 	libr[4][0] = "null\0";
-	data[4].commands[0].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][0]) + 1));
-	strcpy(data[4].commands[0].lib, libr[4][0]);
+	data[4].commands[0].lib = NULL;
+	//strcpy(data[4].commands[0].lib, libr[4][0]);
 
 	nam[4][0] = "Print\0";
 	data[4].commands[0].name = (char*)malloc(sizeof(char)*(strlen(nam[4][0]) + 1));
@@ -1197,7 +1191,7 @@ Language *getData() {
 
 	data[4].commands[1].type = IN_PUT;
 
-	//libr[4][1] = NULL;
+	libr[4][1] = "null\0";
 	data[4].commands[1].lib = NULL;
 	//strcpy(data[4].commands[1].lib, libr[4][1]);
 
@@ -1210,19 +1204,19 @@ Language *getData() {
 	strcpy(data[4].commands[1].disc, dis[4][1]);
 
 	com[4][1] = "null\0";
-	data[4].commands[1].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][1]) + 1));
-	strcpy(data[4].commands[1].syntax, com[4][1]);
+	data[4].commands[1].syntax = NULL;
+	//strcpy(data[4].commands[1].syntax, com[4][1]);
 
 	//command Scanf Double
 
 	data[4].commands[2].type = IN_PUT;
 
 	libr[4][2] = "null\0";
-	data[4].commands[1].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][2]) + 1));
-	strcpy(data[4].commands[2].lib, libr[4][2]);
+	data[4].commands[2].lib = NULL;
+	//strcpy(data[4].commands[2].lib, libr[4][2]);
 
 	nam[4][2] = "Scanf Double\0";
-	data[4].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[4][2]) + 1));
+	data[4].commands[2].name = (char*)malloc(sizeof(char)*(strlen(nam[4][2]) + 1));
 	strcpy(data[4].commands[2].name, nam[4][2]);
 
 	dis[4][2] = "Python does not return inputs as double.\0";
@@ -1230,36 +1224,36 @@ Language *getData() {
 	strcpy(data[4].commands[2].disc, dis[4][2]);
 
 	com[4][2] = "null\0";
-	data[4].commands[2].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][2]) + 1));
-	strcpy(data[4].commands[2].syntax, com[4][1]);
+	data[4].commands[2].syntax = NULL;
+	//strcpy(data[4].commands[2].syntax, com[4][1]);
 
 	//command Scanf Char
 
 	data[4].commands[3].type = IN_PUT;
 
 	libr[4][3] = "null\0";
-	data[4].commands[3].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][3]) + 1));
-	strcpy(data[4].commands[3].lib, libr[4][3]);
+	data[4].commands[3].lib = NULL;
+	//strcpy(data[4].commands[3].lib, libr[4][3]);
 
 	nam[4][3] = "Scanf Char\0";
-	data[4].commands[1].name = (char*)malloc(sizeof(char)*(strlen(nam[4][3]) + 1));
+	data[4].commands[3].name = (char*)malloc(sizeof(char)*(strlen(nam[4][3]) + 1));
 	strcpy(data[4].commands[3].name, nam[4][3]);
 
 	dis[4][3] = "Python does not return inputs as char.\0";
-	data[4].commands[1].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][3]) + 1));
+	data[4].commands[3].disc = (char*)malloc(sizeof(char)*(strlen(dis[4][3]) + 1));
 	strcpy(data[4].commands[3].disc, dis[4][3]);
 
 	com[4][3] = "null\0";
-	data[4].commands[1].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][3]) + 1));
-	strcpy(data[4].commands[3].syntax, com[4][3]);
+	data[4].commands[3].syntax = NULL;
+	//strcpy(data[4].commands[3].syntax, com[4][3]);
 
 	//command Scanf String
 
 	data[4].commands[4].type = IN_PUT;
 
 	libr[4][4] = "null\0";
-	data[4].commands[4].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][4]) + 1));
-	strcpy(data[4].commands[4].lib, libr[4][4]);
+	data[4].commands[4].lib = NULL;
+	//strcpy(data[4].commands[4].lib, libr[4][4]);
 
 	nam[4][4] = "Scanf String\0";
 	data[4].commands[4].name = (char*)malloc(sizeof(char)*(strlen(nam[4][4]) + 1));
@@ -1278,8 +1272,8 @@ Language *getData() {
 	data[4].commands[5].type = OUT_PUT;
 
 	libr[4][5] = "null\0";
-	data[4].commands[5].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][5]) + 1));
-	strcpy(data[4].commands[5].lib, libr[4][5]);
+	data[4].commands[5].lib = NULL;
+	//strcpy(data[4].commands[5].lib, libr[4][5]);
 
 	nam[4][5] = "Putchar\0";
 	data[4].commands[5].name = (char*)malloc(sizeof(char)*(strlen(nam[4][5]) + 1));
@@ -1318,8 +1312,8 @@ Language *getData() {
 	data[4].commands[7].type = ARITMETIC;
 
 	libr[4][7] = "null\0";
-	data[4].commands[7].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][7]) + 1));
-	strcpy(data[4].commands[7].lib, libr[4][7]);
+	data[4].commands[7].lib = NULL;
+	//strcpy(data[4].commands[7].lib, libr[4][7]);
 
 	nam[4][7] = "For\0";
 	data[4].commands[7].name = (char*)malloc(sizeof(char)*(strlen(nam[4][7]) + 1));
@@ -1338,8 +1332,8 @@ Language *getData() {
 	data[4].commands[8].type = LOGIC;
 
 	libr[4][8] = "null\0";
-	data[4].commands[8].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][8]) + 1));
-	strcpy(data[4].commands[8].lib, libr[4][8]);
+	data[4].commands[8].lib = NULL;
+	//strcpy(data[4].commands[8].lib, libr[4][8]);
 
 	nam[4][8] = "While\0";
 	data[4].commands[8].name = (char*)malloc(sizeof(char)*(strlen(nam[4][8]) + 1));
@@ -1358,8 +1352,8 @@ Language *getData() {
 	data[4].commands[9].type = LOGIC;
 
 	libr[4][9] = "null\0";
-	data[4].commands[9].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][9]) + 1));
-	strcpy(data[4].commands[9].lib, libr[4][9]);
+	data[4].commands[9].lib = NULL;
+	//strcpy(data[4].commands[9].lib, libr[4][9]);
 
 	nam[4][9] = "Do_While\0";
 	data[4].commands[9].name = (char*)malloc(sizeof(char)*(strlen(nam[4][9]) + 1));
@@ -1370,16 +1364,16 @@ Language *getData() {
 	strcpy(data[4].commands[9].disc, dis[4][9]);
 
 	com[4][9] = "null\0";
-	data[4].commands[9].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][9]) + 1));
-	strcpy(data[4].commands[9].syntax, com[4][9]);
+	data[4].commands[9].syntax = NULL;
+	//strcpy(data[4].commands[9].syntax, com[4][9]);
 
 	//command If
 
 	data[4].commands[10].type = LOGIC;
 
 	libr[4][10] = "null\0";
-	data[4].commands[10].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][10]) + 1));
-	strcpy(data[4].commands[10].lib, libr[4][10]);
+	data[4].commands[10].lib = NULL;
+	//strcpy(data[4].commands[10].lib, libr[4][10]);
 
 	nam[4][10] = "If\0";
 	data[4].commands[10].name = (char*)malloc(sizeof(char)*(strlen(nam[4][10]) + 1));
@@ -1395,11 +1389,11 @@ Language *getData() {
 
 	//command Malloc
 
-	data[4].commands[11].type = IN_PUT;
+	data[4].commands[11].type = LOGIC;
 
 	libr[4][11] = "null\0";
-	data[4].commands[11].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][11]) + 1));
-	strcpy(data[4].commands[11].lib, libr[4][11]);
+	data[4].commands[11].lib = NULL;
+	//strcpy(data[4].commands[11].lib, libr[4][11]);
 
 	nam[4][11] = "Malloc\0";
 	data[4].commands[11].name = (char*)malloc(sizeof(char)*(strlen(nam[4][11]) + 1));
@@ -1418,8 +1412,8 @@ Language *getData() {
 	data[4].commands[12].type = LOGIC;
 
 	libr[4][12] = "null\0";
-	data[4].commands[12].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][12]) + 1));
-	strcpy(data[4].commands[12].lib, libr[4][12]);
+	data[4].commands[12].lib = NULL;
+	//strcpy(data[4].commands[12].lib, libr[4][12]);
 
 	nam[4][12] = "If\0";
 	data[4].commands[12].name = (char*)malloc(sizeof(char)*(strlen(nam[4][12]) + 1));
@@ -1438,8 +1432,8 @@ Language *getData() {
 	data[4].commands[13].type = LOGIC;
 
 	libr[4][13] = "null\0";
-	data[4].commands[13].lib = (char*)malloc(sizeof(char)*(strlen(libr[4][13]) + 1));
-	strcpy(data[4].commands[13].lib, libr[4][13]);
+	data[4].commands[13].lib = NULL;
+	//strcpy(data[4].commands[13].lib, libr[4][13]);
 
 	nam[4][13] = "Switch\0";
 	data[4].commands[13].name = (char*)malloc(sizeof(char)*(strlen(nam[4][13]) + 1));
@@ -1450,8 +1444,8 @@ Language *getData() {
 	strcpy(data[4].commands[13].disc, dis[4][13]);
 
 	com[4][13] = "null\0";
-	data[4].commands[13].syntax = (char*)malloc(sizeof(char)*(strlen(com[4][13]) + 1));
-	strcpy(data[4].commands[13].syntax, com[4][13]);
+	data[4].commands[13].syntax = NULL;
+	//strcpy(data[4].commands[13].syntax, com[4][13]);
 
 	
 
